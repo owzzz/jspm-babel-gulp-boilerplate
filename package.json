@@ -1,0 +1,57 @@
+{
+  "name": "jspm-babel-gulp-boilerplate",
+  "version": "1.0.0",
+  "description": "A Gulp, JSPM and Babel Boilerplate project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owzzz/jspm-babel-gulp-boilerplate.git"
+  },
+  "keywords": [
+    "Build",
+    "Tool",
+    "Automation",
+    "Compilation",
+    "Transpiler",
+    "Bootstrap",
+    "Boilerplate"
+  ],
+  "author": "Owain Llewellyn <owain.llew@gmail.com> (http://owzzz.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/owzzz/jspm-babel-gulp-boilerplate/issues"
+  },
+  "homepage": "https://github.com/owzzz/jspm-babel-gulp-boilerplate#readme",
+  "devDependencies": {
+    "css-mqpacker": "^4.0.0",
+    "csswring": "^4.2.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jspm": "^0.5.6",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-wait": "0.0.2",
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^4.2.0",
+    "jspm": "^0.16.25",
+    "node-bourbon": "^4.2.3",
+    "node-normalize-scss": "^1.2.0",
+    "postcss-assets": "^3.0.3",
+    "require-dir": "^0.3.0"
+  }
+}

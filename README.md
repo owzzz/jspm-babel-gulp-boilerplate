@@ -4,25 +4,31 @@ A Gulp, JSPM and Babel boilerplate project
 
 ## Installation
 
-### 1. Install jspm CLI:
+#### 1. Install jspm CLI:
 
 ```
     npm install jspm -g
 ```
 
-### 2. Install gulp globally:
+#### 2. Initialise jspm project:
+
+```
+    jspm init
+```
+
+#### 3. Install Gulp globally:
 
 ```
 	npm install gulp -g
 ```
 
-### 3. Install gulp in your project devDependencies:
+#### 3. Install gulp plugins from devDependencies:
 
 ```
-	npm install --save-dev gulp
+	npm install
 ```
 
-### 4. Run gulp:
+#### 4. Run gulp:
 
 ```
 	gulp

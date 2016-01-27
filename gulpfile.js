@@ -1,5 +1,3 @@
-var gulp = require('gulp');
+'use strict';
 
-gulp.task('default', function() {
-  // place code for your default task here
-});
+require('require-dir')('./gulp_tasks', { recurse: true });
