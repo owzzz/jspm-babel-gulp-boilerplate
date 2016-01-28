@@ -1,4 +1,5 @@
 'use strict';
+
 const autoprefixer = require('autoprefixer');
 const cssMqpacker = require('css-mqpacker');
 const csswring = require('csswring');
@@ -38,7 +39,7 @@ function styles() {
         .pipe(gulpSass(sassOptions).on('error', gulpSass.logError))
         .pipe(gulpPostcss(processors))
         .pipe(gulpIf(isDev, gulpSourcemaps.write()))
-        .pipe(gulp.dest(CONSTS.CSS_DEST))
+        .pipe(gulp.dest(CONSTS.CSS_DEST + 'main.css'))
         .pipe(gulpIf(isDev, gulpLivereload({port: CONSTS.LIVERELOAD_PORT})));
 }
 
