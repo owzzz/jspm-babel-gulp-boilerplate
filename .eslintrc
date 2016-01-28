@@ -9,6 +9,15 @@
     "plugins": [
     ],
     "extends": "eslint:recommended",
+    "ecmaFeatures": {
+        "blockBindings": true,
+        "forOf": true,
+        "jsx": true,
+        "arrowFunctions": true,
+        "destructuring", true,
+        "templateStrings": true,
+        "spread": true
+      },
     "rules": {
         "block-scoped-var": 2,
         "brace-style": 2,
@@ -38,7 +47,7 @@
         "no-underscore-dangle": 0,
         "no-unused-expressions": 2,
         "no-unused-vars": [
-            2,
+            1,
             {
                 "args": "none"
             }

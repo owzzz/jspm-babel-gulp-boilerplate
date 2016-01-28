@@ -39,7 +39,7 @@ function styles() {
         .pipe(gulpSass(sassOptions).on('error', gulpSass.logError))
         .pipe(gulpPostcss(processors))
         .pipe(gulpIf(isDev, gulpSourcemaps.write()))
-        .pipe(gulp.dest(CONSTS.CSS_DEST + 'main.css'))
+        .pipe(gulp.dest(CONSTS.CSS_DEST))
         .pipe(gulpIf(isDev, gulpLivereload({port: CONSTS.LIVERELOAD_PORT})));
 }
 
