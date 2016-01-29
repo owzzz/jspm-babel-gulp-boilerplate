@@ -5,7 +5,6 @@ const cssMqpacker = require('css-mqpacker');
 const csswring = require('csswring');
 const gulp = require('gulp');
 const gulpIf = require('gulp-if');
-const gulpLivereload = require('gulp-livereload');
 const gulpNotify = require('gulp-notify');
 const gulpPlumber = require('gulp-plumber');
 const gulpPostcss = require('gulp-postcss');
@@ -39,9 +38,8 @@ function styles() {
         .pipe(gulpSass(sassOptions).on('error', gulpSass.logError))
         .pipe(gulpPostcss(processors))
         .pipe(gulpIf(isDev, gulpSourcemaps.write()))
-        .pipe(gulp.dest(CONSTS.CSS_DEST))
-        .pipe(gulpIf(isDev, gulpLivereload({port: CONSTS.LIVERELOAD_PORT})));
+        .pipe(gulp.dest(CONSTS.CSS_DEST));
 }
 
-gulp.task('sass', ['clean'], styles);
+gulp.task('sass', styles);
 gulp.task('sass-watch', styles);

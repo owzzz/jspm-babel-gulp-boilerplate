@@ -1,3 +1,5 @@
+'use strict';
+
 // Image Optimisation Tasks
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
+// const imagemin = require('gulp-imagemin');
+// const pngquant = require('imagemin-pngquant');

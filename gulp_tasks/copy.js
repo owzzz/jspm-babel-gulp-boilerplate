@@ -1,10 +1,14 @@
 'use strict';
 
 const gulp = require('gulp');
-const gulpChanged = require('gulp-changed');
+const gulpMinify = require('gulp-minify-html');
+const CONSTS = require('./constants');
 
-// TBD
 
-gulp.task('copy', () => {
-	console.log('gulp copy to be completed');
+gulp.task('copy', ['copyTemplates']);
+
+gulp.task('copyTemplates', () => {
+    return gulp.src(CONSTS.SRC + '**/*.html')
+    .pipe(gulpMinify({ empty: true }))
+    .pipe(gulp.dest(CONSTS.DEST));
 });
