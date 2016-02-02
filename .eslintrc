@@ -4,7 +4,9 @@
         "es6": true
     },
     "globals": {
-        "$": false
+        "$": false,
+        "window": true,
+        "alert": true
     },
     "plugins": [
     ],
@@ -16,7 +18,8 @@
         "arrowFunctions": true,
         "destructuring", true,
         "templateStrings": true,
-        "spread": true
+        "spread": true,
+        "modules": false
       },
     "rules": {
         "block-scoped-var": 2,
@@ -34,9 +37,7 @@
         ],
         "dot-notation": 2,
         "eol-last": 2,
-        "indent": [
-            2,
-            4
+        "indent": [2,tab
         ],
         "max-len": [
             1,
@@ -52,6 +53,8 @@
                 "args": "none"
             }
         ],
+        "no-unused-vars": [0],
+        "no-console": [0],
         "quotes": [
             2,
             "single",

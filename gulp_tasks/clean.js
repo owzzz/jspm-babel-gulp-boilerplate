@@ -5,5 +5,5 @@ const del = require('del');
 const CONSTS = require('./constants');
 
 gulp.task('clean',  () => {
-    return del.sync([CONSTS.DEST]);
+	return del.sync([CONSTS.DEST]);
 });

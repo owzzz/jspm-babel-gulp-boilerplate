@@ -3,7 +3,9 @@
 const gulp = require('gulp');
 
 gulp.task('default', () => {
-    gulp.start('build');
+	gulp.start('build');
 });
 
-gulp.task('local', ['clean', 'copy', 'sass', 'scripts', 'connect']);
+gulp.task('build', ['clean', 'copy', 'sass', 'scripts', 'imagemin']);
+
+gulp.task('local', ['clean', 'copy', 'sass', 'scripts', 'copyImages', 'connect']);

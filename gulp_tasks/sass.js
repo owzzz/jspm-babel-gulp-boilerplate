@@ -42,4 +42,3 @@ function styles() {
 }
 
 gulp.task('sass', styles);
-gulp.task('sass-watch', styles);

@@ -1,3 +1,14 @@
 'use strict';
 
-var main = {};
+/* Main Class
+ *************/
+
+class Main {
+	constructor () {
+
+	}
+	bindEvents () {
+	}
+}
+
+console.log('im here');
