@@ -10,6 +10,7 @@ const gulpPlumber = require('gulp-plumber');
 const gulpSourceMaps = require('gulp-sourcemaps');
 const gulpJspm = require('gulp-jspm');
 const CONSTS = require('./constants');
+const gulpConnect = require('gulp-connect');
 
 
 gulp.task('compress', () => {
@@ -17,7 +18,8 @@ gulp.task('compress', () => {
 	.pipe(gulpSourceMaps.init())
 	.pipe(gulpJspm({selfExecutingBundle: true}))
 	.pipe(gulpSourceMaps.write())
-	.pipe(gulp.dest(CONSTS.JS_DEST));
+	.pipe(gulp.dest(CONSTS.JS_DEST))
+	.pipe(gulpConnect.reload());
 });
 
 gulp.task('eslint', () => {

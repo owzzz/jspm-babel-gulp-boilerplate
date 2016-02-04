@@ -15,6 +15,7 @@ const postcssAssets  = require('postcss-assets');
 const nodeBourbon = require('node-bourbon').includePaths;
 const nodeNormalizeScss = require('node-normalize-scss').includePaths;
 const CONSTS = require('./constants');
+const gulpConnect = require('gulp-connect');
 
 const isDev = CONSTS.NODE_ENV !== 'production';
 
@@ -39,7 +40,8 @@ function styles() {
 		.pipe(gulpSass(sassOptions).on('error', gulpSass.logError))
 		.pipe(gulpPostcss(processors))
 		.pipe(gulpIf(isDev, gulpSourcemaps.write()))
-		.pipe(gulp.dest(CONSTS.CSS_DEST));
+		.pipe(gulp.dest(CONSTS.CSS_DEST))
+		.pipe(gulpConnect.reload());
 }
 
 gulp.task('sass', styles);
