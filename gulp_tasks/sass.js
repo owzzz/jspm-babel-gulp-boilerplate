@@ -1,3 +1,4 @@
+/*eslint-disable strict */
 'use strict';
 
 const autoprefixer = require('autoprefixer');
@@ -18,27 +19,27 @@ const CONSTS = require('./constants');
 const isDev = CONSTS.NODE_ENV !== 'production';
 
 const sassOptions = {
-    errLogToConsole: true,
-    includePaths: [
-        nodeBourbon,
-        nodeNormalizeScss
-    ]
+	errLogToConsole: true,
+	includePaths: [
+		nodeBourbon,
+		nodeNormalizeScss
+	]
 };
 
 function styles() {
-    const processors = [
-        autoprefixer({browsers: CONSTS.BROWSER_CONFIG}),
-        cssMqpacker,
-        csswring,
-        postcssAssets
-    ];
-    return gulp.src(CONSTS.CSS_SRC + '/**/*.scss')
-        .pipe(gulpIf(isDev, gulpSourcemaps.init()))
-        .pipe(gulpPlumber({errorHandler: gulpNotify.onError('Styles Error: <%= error.message %>')}))
-        .pipe(gulpSass(sassOptions).on('error', gulpSass.logError))
-        .pipe(gulpPostcss(processors))
-        .pipe(gulpIf(isDev, gulpSourcemaps.write()))
-        .pipe(gulp.dest(CONSTS.CSS_DEST));
+	const processors = [
+		autoprefixer({browsers: CONSTS.BROWSER_CONFIG}),
+		cssMqpacker,
+		csswring,
+		postcssAssets
+	];
+	return gulp.src(CONSTS.CSS_SRC + '/**/*.scss')
+		.pipe(gulpIf(isDev, gulpSourcemaps.init()))
+		.pipe(gulpPlumber({errorHandler: gulpNotify.onError('Styles Error: <%= error.message %>')}))
+		.pipe(gulpSass(sassOptions).on('error', gulpSass.logError))
+		.pipe(gulpPostcss(processors))
+		.pipe(gulpIf(isDev, gulpSourcemaps.write()))
+		.pipe(gulp.dest(CONSTS.CSS_DEST));
 }
 
 gulp.task('sass', styles);

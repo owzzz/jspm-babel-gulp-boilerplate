@@ -1,5 +1,7 @@
-'use strict';
 /*eslint-disable no-console*/
+/*eslint-disable strict */
+'use strict';
+
 
 const gulp = require('gulp');
 const gulpESLint = require('gulp-eslint');
@@ -11,19 +13,19 @@ const CONSTS = require('./constants');
 
 
 gulp.task('compress', () => {
-    return gulp.src([CONSTS.JS_SRC + 'main.js'])
-    .pipe(gulpSourceMaps.init())
-    .pipe(gulpJspm({selfExecutingBundle: true}))
-    .pipe(gulpSourceMaps.write())
-    .pipe(gulp.dest(CONSTS.JS_DEST));
+	return gulp.src([CONSTS.JS_SRC + 'main.js'])
+	.pipe(gulpSourceMaps.init())
+	.pipe(gulpJspm({selfExecutingBundle: true}))
+	.pipe(gulpSourceMaps.write())
+	.pipe(gulp.dest(CONSTS.JS_DEST));
 });
 
 gulp.task('eslint', () => {
-    return gulp.src([CONSTS.JS_SRC + '**/*.js', CONSTS.GULPFILE, CONSTS.GULPTASKS + '**/*.js'])
-    .pipe(gulpPlumber({errorHandler: gulpNotify.onError('ESLint Error: <%= error.message %>')}))
-    .pipe(gulpESLint())
-    .pipe(gulpESLint.format())
-    .pipe(gulpESLint.failAfterError());
+	return gulp.src([CONSTS.JS_SRC + '**/*.js', CONSTS.GULPFILE, CONSTS.GULPTASKS + '**/*.js'])
+	.pipe(gulpPlumber({errorHandler: gulpNotify.onError('ESLint Error: <%= error.message %>')}))
+	.pipe(gulpESLint())
+	.pipe(gulpESLint.format())
+	.pipe(gulpESLint.failAfterError());
 });
 
 

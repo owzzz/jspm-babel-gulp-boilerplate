@@ -1,3 +1,4 @@
+/*eslint-disable strict */
 'use strict';
 
 // Image Optimisation Tasks

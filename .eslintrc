@@ -19,7 +19,7 @@
         "destructuring", true,
         "templateStrings": true,
         "spread": true,
-        "modules": false
+        "modules": true
       },
     "rules": {
         "block-scoped-var": 2,
